@@ -26,6 +26,46 @@ She has a different concept of db than SQL Server, MySQL, Postgre, and DB 2 do
 ***** db schema *****
 ***** db schema *****
 
+***** relational subject area model *****
+What? A model that shows relationships between entities that we are interested in.
+
+When would you use it? When you are trying to understand, from a high level, how the interesting entities are related.
+
+Example: A Quidditch team
+***** relational subject area model *****
+
+***** relational logical model *****
+What? A model that shows relationships between entities that we are interested in.  The model also shows the attributes on the entities.
+
+When would you use it? When you are getting detailed about the entities and their relationships.
+
+Example: A Quidditch team
+***** relational logical model *****
+
+***** relational physical model *****
+What? The software and hardware implementation of the data model.
+
+Example: A Quidditch database maintained on a server farm running SQL Server.
+***** relational physical model *****
+
+***** SQL precision and scale - applies to exact numbers *****
+Precision is the maximum number of storable digits.  Scale is the maximum number of decimal places.  Digits will always be reserved for the scale.
+
+Example: NUMERIC(10,4) can hold up to 999,999.9999 - it cannot hold 9,999,999,999
+***** SQL precision and scale - applies to exact numbers  *****
+
+***** DDL - Data Definition Language *****
+Example: Create, Alter, Drop
+***** DDL - Data Definition Language *****
+
+***** DML - Data Manipulation Language *****
+Example: Insert, Update, Delete
+***** DML - Data Manipulation Language *****
+
+***** TCL - Transaction Control Language *****
+Example: Commit, Rollback, Savepoint
+***** TCL - Transaction Control Language *****
+
 ******* Reading **********
-Discovering SQL page 19
+Discovering SQL page 47
 ******* Reading **********
