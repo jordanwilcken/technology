@@ -1,3 +1,7 @@
+***** Oracle db *****
+She has a different concept of db than SQL Server, MySQL, Postgre, and DB 2 do
+***** Oracle db *****
+
 ***** Structured Data *****
 ***** Structured Data *****
 
@@ -6,7 +10,22 @@
 
 ***** Unstructured Data *****
 ***** Unstructured Data *****
+
+***** PL/SQL *****
+***** PL/SQL *****
+
+***** SQL dialects *****
+***** SQL dialects *****
+
+***** index clustering *****
+***** index clustering *****
+
+***** file-based db *****
+***** file-based db *****
+
+***** db schema *****
+***** db schema *****
 
 ******* Reading **********
-Discovering SQL page 
+Discovering SQL page 19
 ******* Reading **********
