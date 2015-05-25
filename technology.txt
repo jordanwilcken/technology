@@ -1,0 +1,12 @@
+***** Structured Data *****
+***** Structured Data *****
+
+***** IBM DB2 *****
+***** IBM DB2 *****
+
+***** Unstructured Data *****
+***** Unstructured Data *****
+
+******* Reading **********
+Discovering SQL page 
+******* Reading **********
