@@ -66,6 +66,33 @@ Example: Insert, Update, Delete
 Example: Commit, Rollback, Savepoint
 ***** TCL - Transaction Control Language *****
 
+***** Hibernate *****
+***** Hibernate *****
+
+***** ORM *****
+***** ORM *****
+
+***** sharding *****
+***** sharding *****
+
+***** implicit type conversions in SQL *****
+A couple (but there are more) reasons to avoid them:
+- They make your code ambiguous.
+- It takes computer power to guess what your intentions are. Performance won't be as good.
+***** implicit type conversions in SQL *****
+
+***** vertical limit *****
+Means limiting the data returned by specifying the columns you are interested in.
+***** vertical limit *****
+
+***** horizontal limit *****
+Using a criteria to limit the rows returned, for example, returning only colors that end with "-urple".
+***** horizontal limit *****
+
+***** aliasing *****
+Changing names (like a table name or column name) for understandability purposes. When aliasing columns, you use the "as" keyword.
+***** aliasing *****
+
 ******* Reading **********
-Discovering SQL page 47
+Discovering SQL page 61
 ******* Reading **********
