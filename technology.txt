@@ -93,6 +93,31 @@ Using a criteria to limit the rows returned, for example, returning only colors 
 Changing names (like a table name or column name) for understandability purposes. When aliasing columns, you use the "as" keyword.
 ***** aliasing *****
 
+***** TRUNCATE *****
+It's faster than DELETE and doesn't require the undo resources that DELETE does.  The downside is there is NO undo.
+***** TRUNCATE *****
+
+***** data page *****
+***** data page *****
+
+***** primary key *****
+Should be meaningless because meaningful data changes, and we don't want the primary key to change ever.
+Can be handled by computers more quickly if it's compact and numeric because that's how computers roll.
+***** primary key *****
+
+***** referential integrity *****
+Is what prevents you from deleting a parent without first deleting its children. By the same token, referential integrity prevents you from adding a child without first adding its parent.
+***** referential integrity *****
+
+***** 1NF *****
+***** 1NF *****
+
+***** 2NF *****
+***** 2NF *****
+
+***** 3NF *****
+***** 3NF *****
+
 ******* Reading **********
-Discovering SQL page 61
+Discovering SQL page 90
 ******* Reading **********
