@@ -125,5 +125,5 @@ All non-keys must be mutually independent.
 ***** triggers *****
 
 ******* Reading **********
-Discovering SQL page 149
+Discovering SQL page 156
 ******* Reading **********
