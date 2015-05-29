@@ -121,9 +121,47 @@ Columns must be dependent on the primary key in its entirety
 All non-keys must be mutually independent.
 ***** 3NF *****
 
+***** scalar subquery *****
+She is a subquery that returns only a single value.
+
+Example: SELECT some_count
+         FROM (SELECT COUNT(frog_desc) AS some_count from frog);
+***** scalar subquery *****
+
+***** correlated subquery *****
+Is executed once for each row returned for the containing query.
+
+Example:
+		 FROM item;
+***** correlated subquery *****
+
+***** equijoin *****
+is a join where we use the '=' operator
+***** equijoin *****
+
+***** natural join *****
+an equijoin where columns from joined tables have the same name (so this is what it's like when doves cry)
+***** natural join *****
+
+***** set theory *****
+***** set theory *****
+
 ***** triggers *****
 ***** triggers *****
 
+***** views *****
+are only as fast as the query that comprises them.  The view's query is executed every time you use it.  A view is not like a copy or a snapshot.  It's like a pre-build eventhandler or an rc file.
+
+You can think of a view as reusable code.  You can also think of it as code that must be maintained.
+
+You can use views to limit a user's access to data or to retrieve data different ways for different users.
+
+The nice thing is that you might be able to use a view to hide complexity.
+***** views *****
+
+***** optimizing tables *****
+***** optimizing tables *****
+
 ******* Reading **********
-Discovering SQL page 156
+Discovering SQL page 209
 ******* Reading **********
