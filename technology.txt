@@ -162,6 +162,9 @@ The nice thing is that you might be able to use a view to hide complexity.
 ***** optimizing tables *****
 ***** optimizing tables *****
 
+***** bean definition *****
+***** bean definition *****
+
 ******* Reading **********
 Discovering SQL page 209
 ******* Reading **********
