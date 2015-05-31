@@ -165,6 +165,64 @@ The nice thing is that you might be able to use a view to hide complexity.
 ***** bean definition *****
 ***** bean definition *****
 
+***** SQL vs NoSQL *****
+NoSQL is supposed to be easier to scale and more friendly towards data that is not well-defined or that often changes.
+
+NoSQL is supposed to be more object-oriented in its interface than SQL is.
+
+According to Mongo's whitepaper, "graph databases are useful in cases where relationships are core to the application, like social networks."
+
+The Mongo whitepaper says key-value "can be useful for representing polymorphic and unstructured data, as the database does not enforce a set schema across key-value pairs."
+
+The Mongo whitepaper says, in essence, that "wide column stores" or "column family stores" are databases that get fancy with the columns.
+
+The Mongo whitepaper says that since data access for key-value and wide column are so simple (querying by a single key value), they are highly optimizable and scalable.
+
+Mongo whitepaper says the document-based approach gives you the most query power.
+
+Some sources on the interwebs will tell you that SQL has still more query power than document-based NoSQL.
+
+Some sources also say you get better transaction support with SQL than you do with NoSQL.
+
+The SQL API is much older and more widely known than its NoSQL counterparts.
+
+What is necessary for top-tier Web sites, according to proponents of NoSQL, is massive scalability, low latency, the ability to grow the capacity of your database on demand and an easier programming model.
+***** SQL vs NoSQL *****
+
+***** MySQL *****
+She is supposed to be scale-friendly.
+She is open source.
+***** MySQL *****
+
+***** ACID *****
+Atomicity - if a transaction fails, it fails completely, and the database is the same as before the transaction was attempted.
+
+Consistency - if a transaction is invalid it just doesn't go.
+
+Isolation - transactions are mutually independent and must take turns if they are both trying to modify the same data.
+
+Durability - if a transaction succeeds, it will persist.  Even if the system fails.
+
+It seems a transaction is only a transaction if it makes it to the log.
+***** ACID *****
+
+***** CAP *****
+Consistency.
+
+Availability - whenever I make a query, the database will answer it right away.
+
+Partition tolerance - If one node in my data system is down, some other node in the system can respond to my query.
+
+The CAP theorum says it is impossible to guarantee all 3 at the same time.
+***** CAP *****
+
+***** consistent system *****
+A system in which writes are immediately visible in subsequent queries.  Mongo has tunable consistency, defined at the query level the Mongo whitepaper says.  Mongo white paper also says that normally key-value and wide column databases are eventually consistent.
+***** consistent system *****
+
+***** Hadoop *****
+***** Hadoop *****
+
 ******* Reading **********
 Discovering SQL page 209
 ******* Reading **********
