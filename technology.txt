@@ -24,6 +24,7 @@ She has a different concept of db than SQL Server, MySQL, Postgre, and DB 2 do
 ***** file-based db *****
 
 ***** db schema *****
+SQL Standard defines schema as a "named group of related objects".
 ***** db schema *****
 
 ***** relational subject area model *****
@@ -223,6 +224,45 @@ A system in which writes are immediately visible in subsequent queries.  Mongo h
 ***** Hadoop *****
 ***** Hadoop *****
 
+***** Indexes *****
+As in search, they make you faster. Indices on numeric columns with mostly unique values are the ideal.
+***** Indexes *****
+
+***** Clustered Index *****
+In Oracle land they are called index organized tables (IOTs).  Instead of the rows being ordered as they were entered, they are stored on the disc by their index(es).
+
+You want to use this cluster thing for columns that are more static because changing the columns means reordering the entire table.
+
+There are other special ways to index including xml-based and function-based indexes.
+***** Clustered Index *****
+
+***** Materialized View *****
+She is a view/table hybrid.  The upside is performance.  The downside is thedata can get stale (until you refresh).  Good when lots of people are after the same mostly static data.
+***** Materialized View *****
+
+***** Temporary Table *****
+It's what you'd expect.  I guess you create them as snapshots of your more permanent tables.
+
+Visibility and longevity depend on your RDBMS.
+***** Temporary Table *****
+
+***** ETL *****
+Extract, Transform, Load.  A way of transferring data between RDBMSes.
+***** ETL *****
+
+***** Identity Columns and Sequences *****
+RDBMS features used to auto-generate new primary key values.
+***** Identity Columns and Sequences *****
+
+***** Optimistic and Pessimistic Concurrency *****
+Optimistic assumes that resource conflicts are unlikely, and when we do have a conflict we will resubmit data giving the last commit precedence.
+
+Pessimistic assumes we are going to have conflicts and locks resources to prevent them.
+***** Optimistic and Pessimistic Concurrency *****
+
+***** Kerberos *****
+***** Kerberos *****
+
 ******* Reading **********
-Discovering SQL page 209
+Discovering SQL page 287
 ******* Reading **********
