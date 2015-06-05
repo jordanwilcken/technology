@@ -140,6 +140,14 @@ Example:
 is a join where we use the '=' operator
 ***** equijoin *****
 
+***** Inner join *****
+The simplest and most common inner joins are equijoins.  We are combining data from multiple tables where we can see they are related using the = operator.  For example, combining related information from a book and an author table.  We would not get any information on books without authors or autors without books.
+***** Inner join *****
+
+***** Left Outer, Right Outer, and Full joins *****
+Specifying left or right constrains the order in which your columns and table names need to appear in the query.  With the Full join the order doesn't matter.  Each of these joins return the same data, but the data can be ordered differently if you're left or right.  With each of these outer joins you will get all the data from the inner join example plus books without authors and authors without books.
+***** Left Outer, Right Outer, and Full joins *****
+
 ***** natural join *****
 an equijoin where columns from joined tables have the same name (so this is what it's like when doves cry)
 ***** natural join *****
@@ -222,6 +230,7 @@ A system in which writes are immediately visible in subsequent queries.  Mongo h
 ***** consistent system *****
 
 ***** Hadoop *****
+Is an open source Java framework for processing and querying data on server clusters.
 ***** Hadoop *****
 
 ***** Indexes *****
@@ -263,6 +272,46 @@ Pessimistic assumes we are going to have conflicts and locks resources to preven
 ***** Kerberos *****
 ***** Kerberos *****
 
+***** Angularjs service definition functions and when to use them *****
+All services are singletons.
+
+Use provider when you want configuration power to be PROVIDED.
+
+Use factory when you don't need the configuration power.
+
+Use service when you want Angular to create the object that will constitute the service using a constructor that you pass in.
+
+Use value when you want to pass in an object that will constitute the service.
+
+Use constant when you want your value to be unchangeable.
+***** Angularjs service definition functions and when to use them *****
+
+***** filters and ng-repeat *****
+According to Ben Nadel, filters get executed on each call to $digest.  If your collection is small and your filter is simple, it doesn't matter.  Otherwise, you may have performance problems.  The solution is to manually filter your collections with a $watch statement.  All this according to Ben Nadel.
+***** filters and ng-repeat *****
+
+***** $apply and $digest *****
+$apply calls $digest which tells the watchers to check the viewmodel.  $apply accepts an expression as an argument.  It will evaluate the expression before it calls $digest.  It wraps the expression in a try catch for you, and it calls $digest in the finally.  If you're not passing an expression to $apply, you might as well call $digest directly.  This according to Ben Lesh.
+***** $apply and $digest *****
+
+***** getting data for an angular view - when to use John Papa's controller.activate or route resolve *****
+John uses route resolve when he wants the ability to cancel the route before going to the view.  The view will load right away if you use activate, but with route resolve you have to wait for the resolve to resolve before you get to the view.
+***** getting data for an angular view - when to use John Papa's controller.activate or route resolve *****
+
+***** a javascript promise - the A+ specification *****
+Has a 'then' method.  The 'then' provides access to its eventual value or reason.  The 'then' method accepts two arguments an onFulfilled and an onRejected function.  It must return a promise.
+
+A promise's 'then' method can be called multiple times, and each provided onRejected or onFulfilled function must be called in accordance with the promise's ultimate state.
+
+Calls onFulfilled only once after the promise is fulfilled and passes in the promise's value as the first argument.
+
+Calls onRejected only once after the promise is rejected and passes in the reason as the first argument.
+
+Is in one of three states: pending, fulfilled, or rejected.
+
+Once in the fulfilled or rejected states, it stays there.  If rejected, it has a reason that will not change.
+***** a javascript promise - the A+ specification *****
+
 ******* Reading **********
-Discovering SQL page 287
+Discovering SQL page 349
 ******* Reading **********
