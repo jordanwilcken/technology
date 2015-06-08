@@ -152,6 +152,10 @@ Specifying left or right constrains the order in which your columns and table na
 an equijoin where columns from joined tables have the same name (so this is what it's like when doves cry)
 ***** natural join *****
 
+***** naming constraints *****
+The schema requires a name for constraints and will generate one if you do not supply one.  It is easier to work with a constraint that you have named than one with a generated name.
+***** naming constraints *****
+
 ***** set theory *****
 ***** set theory *****
 
@@ -312,6 +316,11 @@ Is in one of three states: pending, fulfilled, or rejected.
 Once in the fulfilled or rejected states, it stays there.  If rejected, it has a reason that will not change.
 ***** a javascript promise - the A+ specification *****
 
+***** js promises in general *****
+The success or fail callbacks are always called asynchronously, which includes those times when it is not necessary.  The soonest the callbacks will be called is the next turn of the event loop.
+***** js promises in general *****
+
 ******* Reading **********
 Discovering SQL page 349
+Joe Celko's for Smarties 42
 ******* Reading **********
