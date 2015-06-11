@@ -267,6 +267,9 @@ Extract, Transform, Load.  A way of transferring data between RDBMSes.
 RDBMS features used to auto-generate new primary key values.
 ***** Identity Columns and Sequences *****
 
+***** Cursors *****
+***** Cursors *****
+
 ***** Optimistic and Pessimistic Concurrency *****
 Optimistic assumes that resource conflicts are unlikely, and when we do have a conflict we will resubmit data giving the last commit precedence.
 
@@ -319,6 +322,29 @@ Once in the fulfilled or rejected states, it stays there.  If rejected, it has a
 ***** js promises in general *****
 The success or fail callbacks are always called asynchronously, which includes those times when it is not necessary.  The soonest the callbacks will be called is the next turn of the event loop.
 ***** js promises in general *****
+
+***** px or em *****
+1 em = font-size of current document (i.e. 12pt). Scales.
+
+1 px = one dot on the computer screen.  Does not scale.
+
+1 pt = 1 / 72 inches. Does not scale.
+
+100% = font-size of current document. Scales.
+***** px or em *****
+
+***** jQuery is for *****
+document traversal and manipulation,
+event handling,
+animation,
+and Ajax
+***** jQuery is for *****
+
+***** when to use the stuff that Kris Kowal's promises can do *****
+All is when you got a bunch of promises together
+There is also a method to handle an arbitrary sequence of promises, but I forget the syntax
+When is for when you dunno if you're getting a promise or a value - we'll worry about that for you!
+***** when to use the stuff that Kris Kowal's promises can do *****
 
 ******* Reading **********
 Discovering SQL page 349
