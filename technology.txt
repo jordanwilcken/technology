@@ -236,10 +236,6 @@ The CAP theorum says it is impossible to guarantee all 3 at the same time.
 A system in which writes are immediately visible in subsequent queries.  Mongo has tunable consistency, defined at the query level the Mongo whitepaper says.  Mongo white paper also says that normally key-value and wide column databases are eventually consistent.
 ***** consistent system *****
 
-***** Hadoop *****
-Is an open source Java framework for processing and querying data on server clusters.
-***** Hadoop *****
-
 ***** Indexes *****
 As in search, they make you faster. Indices on numeric columns with mostly unique values are the ideal.
 ***** Indexes *****
@@ -343,16 +339,59 @@ animation,
 and Ajax
 ***** jQuery is for *****
 
+***** that styling question with the ul *****
+nth-child and other child-y selectors are the ticket here.
+***** that styling question with the ul *****
+
 ***** when to use the stuff that Kris Kowal's promises can do *****
 All is when you got a bunch of promises together.
 There is also a method to handle an arbitrary sequence of promises, but I forget the syntax.
 When is for when you dunno if you're getting a promise or a value - we'll worry about that for you!
 ***** when to use the stuff that Kris Kowal's promises can do *****
 
-***** that styling question with the ul *****
-nth-child and other child-y selectors are the ticket here.
-***** that styling question with the ul *****
+***** Hadoop *****
+According to hadoop.apache.org, "The Apache Hadoop® project develops open-source software for reliable, scalable, distributed computing."
+***** Hadoop *****
 
+***** Spring Framework *****
+Spring provides a restful webservice framework primarily through annotations.
+
+Spring's RestTemplate is a class for mapping the response from a restful webservice to a Java object.
+
+Spring's jdbc template takes care of all your relational setup for you.  You can query the data without having to worry about connections and etc.
+
+Spring also provides an easy button for authentication using LDAP.  Other security-related features as well.
+
+Provides a Twitter interface feature.
+
+Provides validation and web-scraping features.
+
+Really, just check the Spring.io guides to see all what she can do.
+***** Spring Framework *****
+
+***** Spring Data Redis *****
+Provides messaging and a NoSQL datastore of some sort.
+***** Spring Data Redis *****
+
+***** YARN *****
+According to hadoop.apache.org, "Hadoop YARN [is] a framework for job scheduling and cluster resource management."
+***** YARN *****
+
+***** Java Server Faces || Google Web Toolkit *****
+***** Java Server Faces || Google Web Toolkit *****
+
+***** JAX-RS *****
+An acronym for Java Api for Restful Web Services
+***** JAX-RS *****
+
+***** Daemon *****
+***** Daemon *****
+
+***** LDAP *****
+***** LDAP *****
+
+***** Java Bean *****
+***** Java Bean *****
 ******* Reading **********
 Discovering SQL page 349
 Joe Celko's for Smarties 42
