@@ -221,7 +221,48 @@ A system in which writes are immediately visible in subsequent queries.  Mongo h
 ***** consistent system *****
 
 ***** Hadoop *****
+According to hadoop.apache.org, "The Apache Hadoop® project develops open-source software for reliable, scalable, distributed computing."
 ***** Hadoop *****
+
+***** Spring Framework *****
+Spring provides a restful webservice framework primarily through annotations.
+
+Spring's RestTemplate is a class for mapping the response from a restful webservice to a Java object.
+
+Spring's jdbc template takes care of all your relational setup for you.  You can query the data without having to worry about connections and etc.
+
+Spring also provides an easy button for authentication using LDAP.  Other security-related features as well.
+
+Provides a Twitter interface feature.
+
+Provides validation and web-scraping features.
+
+Really, just check the Spring.io guides to see all what she can do.
+***** Spring Framework *****
+
+***** Spring Data Redis *****
+Provides messaging and a NoSQL datastore of some sort.
+***** Spring Data Redis *****
+
+***** YARN *****
+According to hadoop.apache.org, "Hadoop YARN [is] a framework for job scheduling and cluster resource management."
+***** YARN *****
+
+***** Java Server Faces || Google Web Toolkit *****
+***** Java Server Faces || Google Web Toolkit *****
+
+***** JAX-RS *****
+An acronym for Java Api for Restful Web Services
+***** JAX-RS *****
+
+***** Daemon *****
+***** Daemon *****
+
+***** LDAP *****
+***** LDAP *****
+
+***** Java Bean *****
+***** Java Bean *****
 
 ******* Reading **********
 Discovering SQL page 209
