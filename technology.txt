@@ -24,6 +24,7 @@ She has a different concept of db than SQL Server, MySQL, Postgre, and DB 2 do
 ***** file-based db *****
 
 ***** db schema *****
+SQL Standard defines schema as a "named group of related objects".
 ***** db schema *****
 
 ***** relational subject area model *****
@@ -139,9 +140,21 @@ Example:
 is a join where we use the '=' operator
 ***** equijoin *****
 
+***** Inner join *****
+The simplest and most common inner joins are equijoins.  We are combining data from multiple tables where we can see they are related using the = operator.  For example, combining related information from a book and an author table.  We would not get any information on books without authors or autors without books.
+***** Inner join *****
+
+***** Left Outer, Right Outer, and Full joins *****
+Specifying left or right constrains the order in which your columns and table names need to appear in the query.  With the Full join the order doesn't matter.  Each of these joins return the same data, but the data can be ordered differently if you're left or right.  With each of these outer joins you will get all the data from the inner join example plus books without authors and authors without books.
+***** Left Outer, Right Outer, and Full joins *****
+
 ***** natural join *****
 an equijoin where columns from joined tables have the same name (so this is what it's like when doves cry)
 ***** natural join *****
+
+***** naming constraints *****
+The schema requires a name for constraints and will generate one if you do not supply one.  It is easier to work with a constraint that you have named than one with a generated name.
+***** naming constraints *****
 
 ***** set theory *****
 ***** set theory *****
@@ -220,6 +233,115 @@ The CAP theorum says it is impossible to guarantee all 3 at the same time.
 A system in which writes are immediately visible in subsequent queries.  Mongo has tunable consistency, defined at the query level the Mongo whitepaper says.  Mongo white paper also says that normally key-value and wide column databases are eventually consistent.
 ***** consistent system *****
 
+***** Indexes *****
+As in search, they make you faster. Indices on numeric columns with mostly unique values are the ideal.
+***** Indexes *****
+
+***** Clustered Index *****
+In Oracle land they are called index organized tables (IOTs).  Instead of the rows being ordered as they were entered, they are stored on the disc by their index(es).
+
+You want to use this cluster thing for columns that are more static because changing the columns means reordering the entire table.
+
+There are other special ways to index including xml-based and function-based indexes.
+***** Clustered Index *****
+
+***** Materialized View *****
+She is a view/table hybrid.  The upside is performance.  The downside is thedata can get stale (until you refresh).  Good when lots of people are after the same mostly static data.
+***** Materialized View *****
+
+***** Temporary Table *****
+It's what you'd expect.  I guess you create them as snapshots of your more permanent tables.
+
+Visibility and longevity depend on your RDBMS.
+***** Temporary Table *****
+
+***** ETL *****
+Extract, Transform, Load.  A way of transferring data between RDBMSes.
+***** ETL *****
+
+***** Identity Columns and Sequences *****
+RDBMS features used to auto-generate new primary key values.
+***** Identity Columns and Sequences *****
+
+***** Cursors *****
+***** Cursors *****
+
+***** Optimistic and Pessimistic Concurrency *****
+Optimistic assumes that resource conflicts are unlikely, and when we do have a conflict we will resubmit data giving the last commit precedence.
+
+Pessimistic assumes we are going to have conflicts and locks resources to prevent them.
+***** Optimistic and Pessimistic Concurrency *****
+
+***** Kerberos *****
+***** Kerberos *****
+
+***** Angularjs service definition functions and when to use them *****
+All services are singletons.
+
+Use provider when you want configuration power to be PROVIDED.
+
+Use factory when you don't need the configuration power.
+
+Use service when you want Angular to create the object that will constitute the service using a constructor that you pass in.
+
+Use value when you want to pass in an object that will constitute the service.
+
+Use constant when you want your value to be unchangeable.
+***** Angularjs service definition functions and when to use them *****
+
+***** filters and ng-repeat *****
+According to Ben Nadel, filters get executed on each call to $digest.  If your collection is small and your filter is simple, it doesn't matter.  Otherwise, you may have performance problems.  The solution is to manually filter your collections with a $watch statement.  All this according to Ben Nadel.
+***** filters and ng-repeat *****
+
+***** $apply and $digest *****
+$apply calls $digest which tells the watchers to check the viewmodel.  $apply accepts an expression as an argument.  It will evaluate the expression before it calls $digest.  It wraps the expression in a try catch for you, and it calls $digest in the finally.  If you're not passing an expression to $apply, you might as well call $digest directly.  This according to Ben Lesh.
+***** $apply and $digest *****
+
+***** getting data for an angular view - when to use John Papa's controller.activate or route resolve *****
+John uses route resolve when he wants the ability to cancel the route before going to the view.  The view will load right away if you use activate, but with route resolve you have to wait for the resolve to resolve before you get to the view.
+***** getting data for an angular view - when to use John Papa's controller.activate or route resolve *****
+
+***** a javascript promise - the A+ specification *****
+Has a 'then' method.  The 'then' provides access to its eventual value or reason.  The 'then' method accepts two arguments an onFulfilled and an onRejected function.  It must return a promise.
+
+A promise's 'then' method can be called multiple times, and each provided onRejected or onFulfilled function must be called in accordance with the promise's ultimate state.
+
+Calls onFulfilled only once after the promise is fulfilled and passes in the promise's value as the first argument.
+
+Calls onRejected only once after the promise is rejected and passes in the reason as the first argument.
+
+Is in one of three states: pending, fulfilled, or rejected.
+
+Once in the fulfilled or rejected states, it stays there.  If rejected, it has a reason that will not change.
+***** a javascript promise - the A+ specification *****
+
+***** js promises in general *****
+The success or fail callbacks are always called asynchronously, which includes those times when it is not necessary.  The soonest the callbacks will be called is the next turn of the event loop.
+***** js promises in general *****
+
+***** px or em *****
+1 em = font-size of current document (i.e. 12pt). Scales.
+
+1 px = one dot on the computer screen.  Does not scale.
+
+1 pt = 1 / 72 inches. Does not scale.
+
+100% = font-size of current document. Scales.
+***** px or em *****
+
+***** jQuery is for *****
+document traversal and manipulation,
+event handling,
+animation,
+and Ajax
+***** jQuery is for *****
+
+***** when to use the stuff that Kris Kowal's promises can do *****
+All is when you got a bunch of promises together
+There is also a method to handle an arbitrary sequence of promises, but I forget the syntax
+When is for when you dunno if you're getting a promise or a value - we'll worry about that for you!
+***** when to use the stuff that Kris Kowal's promises can do *****
+
 ***** Hadoop *****
 According to hadoop.apache.org, "The Apache Hadoop® project develops open-source software for reliable, scalable, distributed computing."
 ***** Hadoop *****
@@ -265,5 +387,6 @@ An acronym for Java Api for Restful Web Services
 ***** Java Bean *****
 
 ******* Reading **********
-Discovering SQL page 209
+Discovering SQL page 349
+Joe Celko's for Smarties 42
 ******* Reading **********
