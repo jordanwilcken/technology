@@ -136,6 +136,9 @@ Example:
 		 FROM item;
 ***** correlated subquery *****
 
+***** analytic functions *****
+***** analytic functions *****
+
 ***** equijoin *****
 is a join where we use the '=' operator
 ***** equijoin *****
@@ -341,10 +344,14 @@ and Ajax
 ***** jQuery is for *****
 
 ***** when to use the stuff that Kris Kowal's promises can do *****
-All is when you got a bunch of promises together
-There is also a method to handle an arbitrary sequence of promises, but I forget the syntax
+All is when you got a bunch of promises together.
+There is also a method to handle an arbitrary sequence of promises, but I forget the syntax.
 When is for when you dunno if you're getting a promise or a value - we'll worry about that for you!
 ***** when to use the stuff that Kris Kowal's promises can do *****
+
+***** that styling question with the ul *****
+nth-child and other child-y selectors are the ticket here.
+***** that styling question with the ul *****
 
 ******* Reading **********
 Discovering SQL page 349
