@@ -361,6 +361,12 @@ There is also a method to handle an arbitrary sequence of promises, but I forget
 When is for when you dunno if you're getting a promise or a value - we'll worry about that for you!
 ***** when to use the stuff that Kris Kowal's promises can do *****
 
+***** 'preflighting' web requests *****
+means that before making a request that could modify data you make an options request to find out what's allowed and what authorization data needs to be sent for a modifying request. This when making a cross-origin request.
+
+Seems that 'Gecko', which is the engine Firefox is built on does this for you automatically when it is necessary.
+***** 'preflighting' web requests *****
+
 ***** Hadoop *****
 According to hadoop.apache.org, "The Apache Hadoop® project develops open-source software for reliable, scalable, distributed computing."
 ***** Hadoop *****
@@ -404,6 +410,7 @@ An acronym for Java Api for Restful Web Services
 
 ***** Java Bean *****
 ***** Java Bean *****
+
 ******* Reading **********
 Discovering SQL page 349
 Joe Celko's for Smarties 42
