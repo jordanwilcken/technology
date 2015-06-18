@@ -12,6 +12,7 @@ She has a different concept of db than SQL Server, MySQL, Postgre, and DB 2 do
 ***** Unstructured Data *****
 
 ***** PL/SQL *****
+is procedural sql.  Can store your own functions in the database just like you would a table or a view (or some other thing).
 ***** PL/SQL *****
 
 ***** SQL dialects *****
@@ -137,6 +138,12 @@ Example:
 ***** correlated subquery *****
 
 ***** analytic functions *****
+Are also known as "windowing" functions.
+
+In Oracle you use "PARTITION BY" to specify how to partition your rows when executing the function.
+
+When can they help? I've tried to use them when I only want one row as that is tricky in Oracle. In those cases, I think you want to use the ROW_NUMBER function.
+
 ***** analytic functions *****
 
 ***** equijoin *****
@@ -276,6 +283,11 @@ Pessimistic assumes we are going to have conflicts and locks resources to preven
 ***** Optimistic and Pessimistic Concurrency *****
 
 ***** Kerberos *****
+MIT made it.
+
+It provides a system of authentication and encrypted communication for client/server applications.
+
+You can use a free implementation from MIT or buy a different flavor from a vendor.
 ***** Kerberos *****
 
 ***** Angularjs service definition functions and when to use them *****
