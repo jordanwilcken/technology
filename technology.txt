@@ -460,6 +460,26 @@ An acronym for Java Api for Restful Web Services
 According to Wikipedia: The Lightweight Directory Access Protocol is an open, application layer protocol for accessing and maintaining distributed directory information services.
 
 Spring.io says "LDAP is often used by organizations as a central repository for user information and as an authentication service. It can also be used to store the role information for application users."
+
+Zytrax says, "LDAP is characterized as a 'write-once-read-many-times' service. That is to say, the type of data that would normally be stored in an LDAP service would not be expected to change on every access. To illustrate: LDAP would NOT be suitable for maintaining banking transaction records since, by their nature, they change on almost every access (transaction). LDAP would, however, be eminently suitable for maintaining details of the bank branches, hours of opening, employees etc. which change far less frequently."
+
+zytrax also says:
+
+  So why use LDAP? Here is our list of key characteristics which make the (currently) high level of pain worthwhile.
+  
+  1. LDAP provides a remote and local data access method that is standardized.
+  
+  2. Because LDAP uses standardized data access methods Clients and Servers may be sourced (or developed) independently.
+  
+  3. LDAP provides a method whereby data may be moved (delegated) to multiple locations without affecting any external access to that data.
+  
+  4. LDAP systems can be operationally configured to replicate data to one or more applications without adding either code or changing the external access to that data.
+
+In LDAP, data is represented in a Directory Information Tree.  The nodes of the tree are called "entries", and according to zytrax, "Each Entry is composed of one or more objectClasses. Each objectClass has a name. Each Attribute has a name, usually contains data and is a member of an object class." Entries can only have one parent, but attributes can belong to more than one objectclass.
+
+One way to add data to a Directory Information Tree is LDAP Data Interchange Files - text files that describe the DIT and the data to add to the attributes.
+
+Another way to add data to the DIT is an LDAP client like an LDAP browser.
 ***** LDAP *****
 
 ***** Java Bean *****
