@@ -185,8 +185,9 @@ The nice thing is that you might be able to use a view to hide complexity.
 ***** optimizing tables *****
 ***** optimizing tables *****
 
-***** bean definition *****
-***** bean definition *****
+***** java bean definition *****
+According to Wikipedia: On the Java Platform, JavaBeans are classes that encapsulate many objects into a single object (the bean). They are serializable, have a zero-argument constructor, and allow access to properties using getter and setter methods. The name "Bean" was given to encompass this standard, which aims to create reusable software components for Java.
+***** java bean definition *****
 
 ***** SQL vs NoSQL *****
 NoSQL is supposed to be easier to scale and more friendly towards data that is not well-defined or that often changes.
@@ -391,6 +392,56 @@ Really, just check the Spring.io guides to see all what she can do.
 Provides messaging and a NoSQL datastore of some sort.
 ***** Spring Data Redis *****
 
+***** Spring Building Blocks - Controllers *****
+Spring controllers are identified by an @RestController above the class name.  The @RequestMapping annotation maps a request url to a class method.  By default, @RequestMapping will map all http methods.  You can narrow the mapping using syntax like this: @RequestMapping(method=POST).  The @RequestParam annotation binds function arguments to query string parameters.
+
+Example function:
+
+@RequestMapping("/do.something")
+public Object doSomething(@RequestParam(value="arg1", defaultValue=1) int arg1, @RequestParam(value="arg2", defaultValue = -1) int arg2) 
+{
+  int sum = arg1 + arg2;
+  return string.format("%d + %d is %d", arg1, arg2, arg1 + arg2);
+}
+***** Spring Building Blocks - Controllers *****
+
+***** Spring Building Blocks - The "Main" method *****
+You can do the war thing with Spring, but you don't have to.  You can just build it into a jar.  If you annotate the class owning the "Main" method with @SpringBootApplication, you get the following magicks:
+
+1. @Configuration, which marks the class as a source of bean definitions for the application context.
+
+2. @EnableAutoConfiguration, which tells Spring to add other beans and config sugar
+
+3. @EnableWebMvc, which flags the app as a web app, sets up a DispatcherServlet and does other desirable stuffs.
+
+4. @ComponentScan, which tells spring to look for other goodies in your class's same package, including your controllers.
+
+Spring's Example Main Method:
+
+@SpringBootApplication
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+***** Spring Building Blocks - The "Main" method *****
+
+***** Spring Building Blocks - Rest Templates *****
+A spring class you use to map the responses from requests made against rest apis.
+
+Example:
+
+RestTemplate restTemplate = new RestTemplate();
+Page page = restTemplate.getForObject(someUrl);
+
+Will make a request against your url and map the properties on the JSON intoa Page object - a class you have already defined.
+***** Spring Building Blocks - Rest Templates *****
+
+***** Spring Building Blocks - jdbcTemplate class *****
+Convenience class for working with your rdbms.  Methods include execute, update, and query.
+***** Spring Building Blocks - jdbcTemplate class *****
+
 ***** YARN *****
 According to hadoop.apache.org, "Hadoop YARN [is] a framework for job scheduling and cluster resource management."
 ***** YARN *****
@@ -406,6 +457,9 @@ An acronym for Java Api for Restful Web Services
 ***** Daemon *****
 
 ***** LDAP *****
+According to Wikipedia: The Lightweight Directory Access Protocol is an open, application layer protocol for accessing and maintaining distributed directory information services.
+
+Spring.io says "LDAP is often used by organizations as a central repository for user information and as an authentication service. It can also be used to store the role information for application users."
 ***** LDAP *****
 
 ***** Java Bean *****
