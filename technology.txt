@@ -442,6 +442,10 @@ Will make a request against your url and map the properties on the JSON intoa Pa
 Convenience class for working with your rdbms.  Methods include execute, update, and query.
 ***** Spring Building Blocks - jdbcTemplate class *****
 
+***** Spring Building Blocks - server side form validation *****
+A BindingResult object and an argument object annotated with @valid is how you do it.  You annotate your argument object class definition to specify how to validate.  For example, @NotNull checks that a given member is not null.
+***** Spring Building Blocks - server side form validation *****
+
 ***** YARN *****
 According to hadoop.apache.org, "Hadoop YARN [is] a framework for job scheduling and cluster resource management."
 ***** YARN *****
@@ -480,10 +484,12 @@ In LDAP, data is represented in a Directory Information Tree.  The nodes of the 
 One way to add data to a Directory Information Tree is LDAP Data Interchange Files - text files that describe the DIT and the data to add to the attributes.
 
 Another way to add data to the DIT is an LDAP client like an LDAP browser.
+
+Once you've got some data in your tree, you can navigate it for reading or writing with paths that are referred to as "Distinguished Names".
 ***** LDAP *****
 
-***** Java Bean *****
-***** Java Bean *****
+***** java security policy *****
+***** java security policy *****
 
 ******* Reading **********
 Discovering SQL page 349
