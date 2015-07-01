@@ -494,4 +494,5 @@ Once you've got some data in your tree, you can navigate it for reading or writi
 ******* Reading **********
 Discovering SQL page 349
 Joe Celko's for Smarties 42
+http://www.technofattie.com/2014/03/21/five-guidelines-for-avoiding-scope-soup-in-angular.html
 ******* Reading **********
