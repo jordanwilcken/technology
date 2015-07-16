@@ -491,6 +491,10 @@ Once you've got some data in your tree, you can navigate it for reading or writi
 ***** java security policy *****
 ***** java security policy *****
 
+***** LISP *****
+According to Peter Seibel, LISP - even if you don't know it that well - is the most intuitive and direct way to turn your idea into working software. "The programmable programming language" they say.  The fans believe it's the best interface between mind and machine.
+***** LISP *****
+
 ******* Reading **********
 Discovering SQL page 349
 Joe Celko's for Smarties 42
