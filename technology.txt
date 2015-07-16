@@ -24,6 +24,35 @@ is procedural sql.  Can store your own functions in the database just like you w
 ***** file-based db *****
 ***** file-based db *****
 
+***** Tom Kyte's "On ROWNUM and Limiting Results" *****
+http://www.oracle.com/technetwork/issue-archive/2006/06-sep/o56asktom-086197.html
+
+The substance of the article distilled:
+
+Consider a query with this structure: 
+
+select ..., ROWNUM
+  from t
+ where <where clause>
+ group by <columns>
+having <having clause>
+ order by <columns>;
+
+Think of it as being processed in this order:
+
+1. The FROM/WHERE clause goes first.
+2. ROWNUM is assigned and incremented to each output row from the FROM/WHERE clause.
+3. SELECT is applied.
+4. GROUP BY is applied.
+5. HAVING is applied.
+6. ORDER BY is applied.
+
+***** Tom Kyte's "On ROWNUM and Limiting Results" *****
+
+***** HAVING clause *****
+The SQL HAVING Clause is used in combination with the GROUP BY Clause to restrict the groups of returned rows to only those whose the condition is TRUE
+***** HAVING clause *****
+
 ***** db schema *****
 SQL Standard defines schema as a "named group of related objects".
 ***** db schema *****
@@ -491,8 +520,20 @@ Once you've got some data in your tree, you can navigate it for reading or writi
 ***** java security policy *****
 ***** java security policy *****
 
+***** lisp *****
+***** lisp *****
+
+***** IDOR *****
+Insecure Direct Object References.
+
+According to owasp.org, "Insecure Direct Object References occur when an application provides direct access to objects based on user-supplied input. As a result of this vulnerability attackers can bypass authorization and access resources in the system directly, for example database records or files.
+
+Insecure Direct Object References allow attackers to bypass authorization and access resources directly by modifying the value of a parameter used to directly point to an object. Such resources can be database entries belonging to other users, files in the system, and more. This is caused by the fact that the application takes user supplied input and uses it to retrieve an object without performing sufficient authorization checks."
+***** IDOR *****
+
 ******* Reading **********
 Discovering SQL page 349
 Joe Celko's for Smarties 42
 http://www.technofattie.com/2014/03/21/five-guidelines-for-avoiding-scope-soup-in-angular.html
+https://18f.gsa.gov/2015/07/16/introduction-to-https-webinar/
 ******* Reading **********
