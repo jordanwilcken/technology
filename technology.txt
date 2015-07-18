@@ -98,9 +98,11 @@ Example: Commit, Rollback, Savepoint
 ***** TCL - Transaction Control Language *****
 
 ***** Hibernate *****
+Is an ORM framework for Java.
 ***** Hibernate *****
 
 ***** ORM *****
+A system of mapping the objects of object-oriented programming to their relational database counterparts.
 ***** ORM *****
 
 ***** sharding *****
@@ -419,6 +421,8 @@ Really, just check the Spring.io guides to see all what she can do.
 
 ***** Spring Data Redis *****
 Provides messaging and a NoSQL datastore of some sort.
+
+Redis is a key-value NoSQL server.
 ***** Spring Data Redis *****
 
 ***** Spring Building Blocks - Controllers *****
@@ -535,5 +539,4 @@ Insecure Direct Object References allow attackers to bypass authorization and ac
 Discovering SQL page 349
 Joe Celko's for Smarties 42
 http://www.technofattie.com/2014/03/21/five-guidelines-for-avoiding-scope-soup-in-angular.html
-https://18f.gsa.gov/2015/07/16/introduction-to-https-webinar/
 ******* Reading **********
