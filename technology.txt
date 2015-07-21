@@ -295,6 +295,69 @@ It's what you'd expect.  I guess you create them as snapshots of your more perma
 Visibility and longevity depend on your RDBMS.
 ***** Temporary Table *****
 
+***** Editioning *****
+A feature to minimize downtime. As in the downtime required to push a new deployment of an application.
+
+From https://oracletechnologistblog.wordpress.com/tag/editioning-view/
+
+whats editionable object type:  Code type objects such as PL/SQL, views, types, synonyms, triggers and editioning views supports edition. Nonetheless, it prevents changes in one edition of the object to impact other editions of same object. Especially in ADOP where the instance has to maintain multiple copies of the code objects, edition feature come in handy to accomplish the online patching capability.
+
+Whats non-editionable object type: So what about storage objects? Will that provide any editioning? Short answer is no. Here are the details. Storage objects such as tables, indexes, materialized views and also sequences do not support editioning and are categorized as non-editionable types.
+
+***** Editioning *****
+
+***** PL/SQL package *****
+From docs.oracle.com:
+
+A package is a schema object that groups logically related PL/SQL types, items, and subprograms. Packages usually have two parts, a specification and a body, although sometimes the body is unnecessary. The specification (spec for short) is the interface to your applications; it declares the types, variables, constants, exceptions, cursors, and subprograms available for use. The body fully defines cursors and subprograms, and so implements the spec.**** PL/SQL package *****
+***** PL/SQL package *****
+
+***** Queues *****
+From docs.oracle.com:
+
+When Web-based business applications communicate with each other, producer applications enqueue messages and consumer applications dequeue messages. Advanced Queuing provides database-integrated message queuing functionality. Advanced Queuing leverages the functions of the Oracle database so that messages can be stored persistently, propagated between queues on different machines and databases, and transmitted using Oracle Net Services, HTTP(S), and SMTP.
+***** Queues *****
+
+***** Oracle Schema *****
+From the Oracle concepts page:
+
+A schema is a collection of logical structures of data, or schema objects. A schema is owned by a database user and has the same name as that user. Each user owns a single schema. Schema objects can be created and manipulated with SQL and include the following types of objects:
+
+    Clusters
+    Database links
+    Database triggers
+    Dimensions
+    External procedure libraries
+    Indexes and index types
+    Java classes, Java resources, and Java sources
+    Materialized views and materialized view logs
+    Object tables, object types, and object views
+    Operators
+    Sequences
+    Stored functions, procedures, and packages
+    Synonyms
+    Tables and index-organized tables
+    Views
+
+Schema objects are logical data storage structures. Schema objects do not have a one-to-one correspondence to physical files on disk that store their information. However, Oracle stores a schema object logically within a tablespace of the database. The data of each object is physically contained in one or more of the tablespace's datafiles. For some objects, such as tables, indexes, and clusters, you can specify how much disk space Oracle allocates for the object within the tablespace's datafiles.
+***** Oracle Schema *****
+
+***** Shard *****
+From Wikipedia (sharding vs horizontal partitioning)
+
+Horizontal partitioning splits one or more tables by row, usually within a single instance of a schema and a database server. It may offer an advantage by reducing index size (and thus search effort) provided that there is some obvious, robust, implicit way to identify in which table a particular row will be found, without first needing to search the index, e.g., the classic example of the 'CustomersEast' and 'CustomersWest' tables, where their zip code already indicates where they will be found.
+
+Sharding goes beyond this: it partitions the problematic table(s) in the same way, but it does this across potentially multiple instances of the schema. The obvious advantage would be that search load for the large partitioned table can now be split across multiple servers (logical or physical), not just multiple indexes on the same logical server.
+
+Splitting shards across multiple isolated instances requires more than simple horizontal partitioning. The hoped-for gains in efficiency would be lost, if querying the database required both instances to be queried, just to retrieve a simple dimension table. Beyond partitioning, sharding thus splits large partitionable tables across the servers, while smaller tables are replicated as complete units.
+
+This is also why sharding is related to a shared nothing architecture—once sharded, each shard can live in a totally separate logical schema instance / physical database server / data center / continent. There is no ongoing need to retain shared access (from between shards) to the other unpartitioned tables in other shards.
+
+This makes replication across multiple servers easy (simple horizontal partitioning does not). It is also useful for worldwide distribution of applications, where communications links between data centers would otherwise be a bottleneck.
+
+There is also a requirement for some notification and replication mechanism between schema instances, so that the unpartitioned tables remain as closely synchronized as the application demands. This is a complex choice in the architecture of sharded systems: approaches range from making these effectively read-only (updates are rare and batched), to dynamically replicated tables (at the cost of reducing some of the distribution benefits of sharding) and many options in between.
+***** Shard *****
+
 ***** ETL *****
 Extract, Transform, Load.  A way of transferring data between RDBMSes.
 ***** ETL *****
