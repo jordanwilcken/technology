@@ -9,6 +9,7 @@ She has a different concept of db than SQL Server, MySQL, Postgre, and DB 2 do
 ***** IBM DB2 *****
 
 ***** Unstructured Data *****
+The wikipedias say it is data that is not organized in a pre-defined way.
 ***** Unstructured Data *****
 
 ***** PL/SQL *****
@@ -20,9 +21,6 @@ is procedural sql.  Can store your own functions in the database just like you w
 
 ***** index clustering *****
 ***** index clustering *****
-
-***** file-based db *****
-***** file-based db *****
 
 ***** Tom Kyte's "On ROWNUM and Limiting Results" *****
 http://www.oracle.com/technetwork/issue-archive/2006/06-sep/o56asktom-086197.html
@@ -104,9 +102,6 @@ Is an ORM framework for Java.
 ***** ORM *****
 A system of mapping the objects of object-oriented programming to their relational database counterparts.
 ***** ORM *****
-
-***** sharding *****
-***** sharding *****
 
 ***** implicit type conversions in SQL *****
 A couple (but there are more) reasons to avoid them:
@@ -201,6 +196,12 @@ The schema requires a name for constraints and will generate one if you do not s
 ***** set theory *****
 
 ***** triggers *****
+CREATE OR REPLACE TRIGGER play_sound_effect
+AFTER INSERT ON landed_punches FOR EACH ROW
+DECLARE punch_sound CHAR(4) = 'Pow!';
+BEGIN dbms_output.put_line(punch_sound);
+END;
+/
 ***** triggers *****
 
 ***** views *****
@@ -287,8 +288,18 @@ You want to use this cluster thing for columns that are more static because chan
 There are other special ways to index including xml-based and function-based indexes.
 ***** Clustered Index *****
 
+***** Oracle Clusters *****
+From the Oracle 11 concepts guids:
+
+Clusters are groups of one or more tables physically stored together because they share common columns and are often used together. Because related rows are physically stored together, disk access time improves.
+***** Oracle Clusters *****
+
 ***** Materialized View *****
 She is a view/table hybrid.  The upside is performance.  The downside is thedata can get stale (until you refresh).  Good when lots of people are after the same mostly static data.
+
+From Oracle 11 Concepts:
+
+A materialized view provides access to table data by storing the results of a query in a separate schema object. Unlike an ordinary view, which does not take up any storage space or contain any data, a materialized view contains the rows resulting from a query against one or more base tables or views. Query response time is improved because the query accesses the materialized view instead of executing against the base tables. A materialized view can be stored in the same database as its base tables or in a different database.
 ***** Materialized View *****
 
 ***** Temporary Table *****
@@ -369,6 +380,9 @@ RDBMS features used to auto-generate new primary key values.
 ***** Identity Columns and Sequences *****
 
 ***** Cursors *****
+A cursor is a handle or name for a private SQL area - an area in memory that holds a parsed statement and other information for processing.
+
+Although most Oracle Database users rely on the automatic cursor handling of the Oracle Database utilities, the programmatic interfaces offer application designers more control over cursors. In application development, a cursor is a named resource available to a program and can be used specifically to parse SQL statements embedded within the application.
 ***** Cursors *****
 
 ***** Optimistic and Pessimistic Concurrency *****
@@ -438,6 +452,12 @@ The success or fail callbacks are always called asynchronously, which includes t
 
 100% = font-size of current document. Scales.
 ***** px or em *****
+
+***** Shadow DOM *****
+From http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/
+
+Shadow DOM refers to the ability of the browser to include a subtree of DOM elements into the rendering of a document, but not into the main document DOM tree.
+***** Shadow DOM *****
 
 ***** jQuery is for *****
 document traversal and manipulation,
