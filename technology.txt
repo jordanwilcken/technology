@@ -383,6 +383,10 @@ RDBMS features used to auto-generate new primary key values.
 A cursor is a handle or name for a private SQL area - an area in memory that holds a parsed statement and other information for processing.
 
 Although most Oracle Database users rely on the automatic cursor handling of the Oracle Database utilities, the programmatic interfaces offer application designers more control over cursors. In application development, a cursor is a named resource available to a program and can be used specifically to parse SQL statements embedded within the application.
+
+Cursors are static, as they are defined by the queries that create them. In some cases, the queries themselves are created at runtime. A cursor variable, known as a REF CURSOR, is more flexible than a cursor because it is independent of a specific query. It can be opened for a query, can process the result set, and can be re-used for a query that returns the same set of columns. This also makes REF CURSORs ideal for passing results of a query between subprograms.
+
+REF CURSORS can be declared with a return type that specifies the form of the result set (strongly typed), or without a return type to retrieve any result set (weakly-typed). Oracle recommends that you declare a REF CURSOR with a return type as it is less prone to error because of its strong association with correctly formulated queries. If you need a more flexible cursor that may be associated with several interchangeable types, use the predefined type SYS_REFCURSOR.
 ***** Cursors *****
 
 ***** Optimistic and Pessimistic Concurrency *****
