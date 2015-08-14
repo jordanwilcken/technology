@@ -306,6 +306,10 @@ A materialized view provides access to table data by storing the results of a qu
 It's what you'd expect.  I guess you create them as snapshots of your more permanent tables.
 
 Visibility and longevity depend on your RDBMS.
+
+From Oracle Concepts:
+
+In addition to permanent tables, Oracle Database can create temporary tables to hold session-private data that exists only for the duration of a transaction or session.
 ***** Temporary Table *****
 
 ***** Editioning *****
@@ -456,6 +460,9 @@ The success or fail callbacks are always called asynchronously, which includes t
 
 100% = font-size of current document. Scales.
 ***** px or em *****
+
+***** CSS preprocessor (LESS, SASS) *****
+***** CSS preprocessor (LESS, SASS) *****
 
 ***** Shadow DOM *****
 From http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/
@@ -626,4 +633,5 @@ Insecure Direct Object References allow attackers to bypass authorization and ac
 Discovering SQL page 349
 Joe Celko's for Smarties 42
 http://www.technofattie.com/2014/03/21/five-guidelines-for-avoiding-scope-soup-in-angular.html
+Page 107 of downloaded e-book ProGit
 ******* Reading **********
